@@ -1,0 +1,13 @@
+<h1>Results Page</h1>
+<ul>
+<% data["Search"].forEach(function(movie){ %>
+  <li><%= movie["Title"] %> - <em><%= movie["Year"] %></em></li>
+<% }); %>
+</ul>
+
+<form action="/results" method="get">
+  <input type="text" name="search" placeholder="Movie title">
+  <button type="submit">Search</button>
+</form>
+
+<a href="/">Back</a>
